@@ -349,6 +349,8 @@ def setup(args):
 def main(args):
     register_coco_instances("prima_train",{},"FewX/datasets/coco/new_annotations/final_split_non_voc_instances_prima.json","FewX/datasets/coco/Images")
     register_coco_instances("prima_val",{},"FewX/datasets/coco/prima/annotations-val.json","FewX/datasets/coco/val")
+    register_coco_instances("annots-train",{},"/content/content/annots/train.json","/content/content/annots/")
+    register_coco_instances("annots-val",{},"/content/content/annots/test.json","/content/content/annots/")
 
     MetadataCatalog.get("prima_train").thing_classes = ['Background', 'TextRegion', 'ImageRegion', 'TableRegion', 'MathsRegion', 'SeparatorRegion', 'OtherRegion']
     MetadataCatalog.get("prima_val").thing_classes = ['Background', 'TextRegion', 'ImageRegion', 'TableRegion', 'MathsRegion', 'SeparatorRegion', 'OtherRegion',]
